@@ -15,6 +15,20 @@
     "deleted": false,
     "policies": []
   },
-  "publishedLayoutmongoEscapedWidgets": {},
-  "unpublishedLayoutmongoEscapedWidgets": {}
+  "publishedLayoutmongoEscapedWidgets": {
+    "Mongo": [
+      "Table1"
+    ],
+    "Crud_Mongo": [
+      "data_table"
+    ]
+  },
+  "unpublishedLayoutmongoEscapedWidgets": {
+    "Mongo": [
+      "Table1"
+    ],
+    "Crud_Mongo": [
+      "data_table"
+    ]
+  }
 }
