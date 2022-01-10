@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "publishedDefaultPageName": "Postgre",
-  "unpublishedDefaultPageName": "Postgre",
+  "publishedDefaultPageName": "CRUD_Postgre",
+  "unpublishedDefaultPageName": "CRUD_Postgre",
   "actionCollectionList": [],
   "editModeTheme": {
     "name": "Classic",

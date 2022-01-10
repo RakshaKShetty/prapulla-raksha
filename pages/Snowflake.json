@@ -1,0 +1,2059 @@
+{
+  "unpublishedPage": {
+    "name": "Snowflake",
+    "slug": "snowflake",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 822,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1710,
+          "containerStyle": "none",
+          "snapRows": 64,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 49,
+          "minHeight": 650,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Select1",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Label",
+              "topRow": 1,
+              "bottomRow": 7.9,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{{Select1.options[0].value}}",
+              "selectionType": "SINGLE_SELECT",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                }
+              ],
+              "leftColumn": 0,
+              "options": "{{select_data.data.map( (obj) =>{ return  {'label': obj.NAME, 'value': obj.NAME } })}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "iaziyl9lrb",
+              "isRequired": false,
+              "rightColumn": 20,
+              "widgetId": "jfdv6wnmrx",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 8.9,
+              "bottomRow": 40.9,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "3nhu6at5af": {
+                  "seriesName": "Sales",
+                  "data": "{{select_data.data.map( (obj) =>{ return  {'x': obj.NAME, 'y': obj.ID } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.3nhu6at5af.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "9e2zzkhcpq",
+              "rightColumn": 24,
+              "widgetId": "uogp2uuspm",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Revenue($)",
+              "chartName": "Sales Report",
+              "xAxisName": "Product Line",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "ID",
+                "NAME",
+                "AGE",
+                "ADDRESS",
+                "SALARY",
+                "LAST_LOGIN"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 41.9,
+              "bottomRow": 69.9,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.ID.computedValue"
+                },
+                {
+                  "key": "primaryColumns.NAME.computedValue"
+                },
+                {
+                  "key": "primaryColumns.AGE.computedValue"
+                },
+                {
+                  "key": "primaryColumns.ADDRESS.computedValue"
+                },
+                {
+                  "key": "primaryColumns.SALARY.computedValue"
+                },
+                {
+                  "key": "primaryColumns.LAST_LOGIN.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "ID": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "ID",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ID",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ID))}}"
+                },
+                "NAME": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "NAME",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "NAME",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.NAME))}}"
+                },
+                "AGE": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "AGE",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "AGE",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.AGE))}}"
+                },
+                "ADDRESS": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "ADDRESS",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ADDRESS",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ADDRESS))}}"
+                },
+                "SALARY": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "SALARY",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "SALARY",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.SALARY))}}"
+                },
+                "LAST_LOGIN": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "LAST_LOGIN",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "LAST_LOGIN",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.LAST_LOGIN))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "jpmnk3xul7",
+              "derivedColumns": {},
+              "rightColumn": 34,
+              "textSize": "PARAGRAPH",
+              "widgetId": "e3lclgiyd0",
+              "isVisibleFilters": true,
+              "tableData": "{{select_data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 70.9,
+              "bottomRow": 74.9,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "leftColumn": 0,
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{JSON.stringify(select_data.data, null, 2)}}",
+              "key": "vmxxzuvqk3",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "widgetId": "cpk195nyh6",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "Statbox1",
+              "backgroundColor": "white",
+              "rightColumn": 18,
+              "isCanvas": true,
+              "displayName": "Stats Box",
+              "iconSVG": "/static/media/icon.382a7c7b.svg",
+              "widgetId": "leh88nl9s6",
+              "topRow": 76,
+              "bottomRow": 90,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "STATBOX_WIDGET",
+              "hideCard": false,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 2,
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "rightColumn": 202.5,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "k6g2zbmh2o",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 140,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "leh88nl9s6",
+                  "minHeight": 140,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "Text2",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Page Views",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "gzftyg9nwd",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#999999",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH2"
+                    },
+                    {
+                      "widgetName": "Text3",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "2.6 M",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "f0t2fk7pac",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "HEADING1"
+                    },
+                    {
+                      "widgetName": "Text4",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "21% more than last month",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "60rmmdbq99",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#03B365",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH2"
+                    },
+                    {
+                      "boxShadow": "NONE",
+                      "widgetName": "IconButton1",
+                      "buttonColor": "#03B365",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634a.svg",
+                      "topRow": 2,
+                      "bottomRow": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 46,
+                      "isDisabled": false,
+                      "key": "l186zj5lku",
+                      "rightColumn": 62,
+                      "iconName": "arrow-top-right",
+                      "widgetId": "f830tsespq",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "CIRCLE",
+                      "buttonVariant": "PRIMARY"
+                    }
+                  ],
+                  "key": "00xu5tk7cf"
+                }
+              ],
+              "key": "u8k5046j1e"
+            },
+            {
+              "widgetName": "Switch1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "defaultSwitchState"
+                }
+              ],
+              "displayName": "Switch",
+              "iconSVG": "/static/media/icon.a3115bc1.svg",
+              "topRow": 76,
+              "bottomRow": 80,
+              "parentRowSpace": 10,
+              "type": "SWITCH_WIDGET",
+              "alignWidget": "LEFT",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 21,
+              "dynamicBindingPathList": [
+                {
+                  "key": "defaultSwitchState"
+                }
+              ],
+              "isDisabled": false,
+              "key": "g63s0ny6xk",
+              "rightColumn": 33,
+              "widgetId": "bsc58ygtui",
+              "isVisible": true,
+              "label": "Label",
+              "defaultSwitchState": "{{select_data.data}}",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "SwitchGroup1",
+              "isCanvas": false,
+              "displayName": "Switch Group",
+              "iconSVG": "/static/media/icon.c98225ee.svg",
+              "topRow": 83,
+              "bottomRow": 89,
+              "parentRowSpace": 10,
+              "type": "SWITCH_GROUP_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 20,
+              "options": [
+                {
+                  "label": "Blue",
+                  "value": "BLUE"
+                },
+                {
+                  "label": "Green",
+                  "value": "GREEN"
+                },
+                {
+                  "label": "Red",
+                  "value": "RED"
+                }
+              ],
+              "isDisabled": false,
+              "key": "3caxmrqjjg",
+              "isRequired": false,
+              "rightColumn": 38,
+              "defaultSelectedValues": [
+                "BLUE"
+              ],
+              "widgetId": "al1e1pkqne",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "isInline": true,
+              "alignment": "left"
+            },
+            {
+              "widgetName": "Tabs1",
+              "isCanvas": true,
+              "displayName": "Tabs",
+              "iconSVG": "/static/media/icon.74a6d653.svg",
+              "topRow": 93,
+              "bottomRow": 133,
+              "parentRowSpace": 10,
+              "type": "TABS_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 5,
+              "children": [
+                {
+                  "tabId": "tab1",
+                  "widgetName": "Canvas2",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [],
+                  "isDisabled": false,
+                  "key": "00xu5tk7cf",
+                  "tabName": "Tab 1",
+                  "rightColumn": 303.75,
+                  "detachFromLayout": true,
+                  "widgetId": "suztwphpa6",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wp3aoa43eh",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                },
+                {
+                  "tabId": "tab2",
+                  "widgetName": "Canvas3",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [],
+                  "isDisabled": false,
+                  "key": "00xu5tk7cf",
+                  "tabName": "Tab 2",
+                  "rightColumn": 303.75,
+                  "detachFromLayout": true,
+                  "widgetId": "8kw2mcmyt7",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wp3aoa43eh",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "key": "20ige82xke",
+              "rightColumn": 29,
+              "widgetId": "wp3aoa43eh",
+              "defaultTab": "Tab 1",
+              "shouldShowTabs": true,
+              "tabsObj": {
+                "tab1": {
+                  "label": "Tab 1",
+                  "id": "tab1",
+                  "widgetId": "suztwphpa6",
+                  "isVisible": true,
+                  "index": 0
+                },
+                "tab2": {
+                  "label": "Tab 2",
+                  "id": "tab2",
+                  "widgetId": "8kw2mcmyt7",
+                  "isVisible": true,
+                  "index": 1
+                }
+              },
+              "isVisible": true,
+              "version": 3,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Text5",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 93,
+              "bottomRow": 97,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 30,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{select_data.data}}",
+              "key": "vmxxzuvqk3",
+              "rightColumn": 46,
+              "textAlign": "LEFT",
+              "widgetId": "p3um5iszn5",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "TreeSelect1",
+              "displayName": "TreeSelect",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Label",
+              "topRow": 99,
+              "bottomRow": 105.9,
+              "parentRowSpace": 10,
+              "type": "SINGLE_SELECT_TREE_WIDGET",
+              "hideCard": false,
+              "defaultOptionValue": "BLUE",
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 30,
+              "options": [
+                {
+                  "label": "Blue",
+                  "value": "BLUE",
+                  "children": [
+                    {
+                      "label": "Dark Blue",
+                      "value": "DARK BLUE"
+                    },
+                    {
+                      "label": "Light Blue",
+                      "value": "LIGHT BLUE"
+                    }
+                  ]
+                },
+                {
+                  "label": "Green",
+                  "value": "GREEN"
+                },
+                {
+                  "label": "Red",
+                  "value": "RED"
+                }
+              ],
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "foy7ad1hwf",
+              "isRequired": false,
+              "rightColumn": 50,
+              "widgetId": "yvvjntsftc",
+              "isVisible": true,
+              "version": 1,
+              "expandAll": false,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "allowClear": false
+            },
+            {
+              "widgetName": "Video1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "url"
+                }
+              ],
+              "displayName": "Video",
+              "iconSVG": "/static/media/icon.39c2d696.svg",
+              "topRow": 108,
+              "bottomRow": 136,
+              "parentRowSpace": 10,
+              "type": "VIDEO_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 31,
+              "dynamicBindingPathList": [
+                {
+                  "key": "url"
+                }
+              ],
+              "key": "zyf0w1z69r",
+              "rightColumn": 55,
+              "widgetId": "sfkgsjozfe",
+              "isVisible": true,
+              "version": 1,
+              "url": "{{select_data.data}}",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "autoPlay": false
+            },
+            {
+              "widgetName": "Table2",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "ID",
+                "NAME",
+                "AGE",
+                "ADDRESS",
+                "SALARY",
+                "LAST_LOGIN"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 141,
+              "bottomRow": 169,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.ID.computedValue"
+                },
+                {
+                  "key": "primaryColumns.NAME.computedValue"
+                },
+                {
+                  "key": "primaryColumns.AGE.computedValue"
+                },
+                {
+                  "key": "primaryColumns.ADDRESS.computedValue"
+                },
+                {
+                  "key": "primaryColumns.SALARY.computedValue"
+                },
+                {
+                  "key": "primaryColumns.LAST_LOGIN.computedValue"
+                }
+              ],
+              "leftColumn": 6,
+              "primaryColumns": {
+                "ID": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "ID",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ID",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.ID))}}"
+                },
+                "NAME": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "NAME",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "NAME",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.NAME))}}"
+                },
+                "AGE": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "AGE",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "AGE",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.AGE))}}"
+                },
+                "ADDRESS": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "ADDRESS",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ADDRESS",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.ADDRESS))}}"
+                },
+                "SALARY": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "SALARY",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "SALARY",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.SALARY))}}"
+                },
+                "LAST_LOGIN": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "LAST_LOGIN",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "LAST_LOGIN",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.LAST_LOGIN))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "jpmnk3xul7",
+              "derivedColumns": {},
+              "rightColumn": 40,
+              "textSize": "PARAGRAPH",
+              "widgetId": "1iv3jxopwb",
+              "isVisibleFilters": true,
+              "tableData": "{{select_data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61dbf6d99dee1c2e929d120f",
+              "name": "select_data",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "IconButton1",
+          "Video1",
+          "TreeSelect1",
+          "Text5",
+          "Text4",
+          "Text3",
+          "Text2",
+          "Text1",
+          "Switch1",
+          "SwitchGroup1",
+          "MainContainer",
+          "Chart1",
+          "Statbox1",
+          "Select1",
+          "Canvas1",
+          "Canvas2",
+          "Canvas3",
+          "Table2",
+          "Tabs1",
+          "Table1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Snowflake",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "publishedPage": {
+    "name": "Snowflake",
+    "slug": "snowflake",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 822,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1710,
+          "containerStyle": "none",
+          "snapRows": 64,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 49,
+          "minHeight": 650,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Select1",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Label",
+              "topRow": 1,
+              "bottomRow": 7.9,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{{Select1.options[0].value}}",
+              "selectionType": "SINGLE_SELECT",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                }
+              ],
+              "leftColumn": 0,
+              "options": "{{select_data.data.map( (obj) =>{ return  {'label': obj.NAME, 'value': obj.NAME } })}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "iaziyl9lrb",
+              "isRequired": false,
+              "rightColumn": 20,
+              "widgetId": "jfdv6wnmrx",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 8.9,
+              "bottomRow": 40.9,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "3nhu6at5af": {
+                  "seriesName": "Sales",
+                  "data": "{{select_data.data.map( (obj) =>{ return  {'x': obj.NAME, 'y': obj.ID } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.3nhu6at5af.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "9e2zzkhcpq",
+              "rightColumn": 24,
+              "widgetId": "uogp2uuspm",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Revenue($)",
+              "chartName": "Sales Report",
+              "xAxisName": "Product Line",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "ID",
+                "NAME",
+                "AGE",
+                "ADDRESS",
+                "SALARY",
+                "LAST_LOGIN"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 41.9,
+              "bottomRow": 69.9,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.ID.computedValue"
+                },
+                {
+                  "key": "primaryColumns.NAME.computedValue"
+                },
+                {
+                  "key": "primaryColumns.AGE.computedValue"
+                },
+                {
+                  "key": "primaryColumns.ADDRESS.computedValue"
+                },
+                {
+                  "key": "primaryColumns.SALARY.computedValue"
+                },
+                {
+                  "key": "primaryColumns.LAST_LOGIN.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "ID": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "ID",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ID",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ID))}}"
+                },
+                "NAME": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "NAME",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "NAME",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.NAME))}}"
+                },
+                "AGE": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "AGE",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "AGE",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.AGE))}}"
+                },
+                "ADDRESS": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "ADDRESS",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ADDRESS",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ADDRESS))}}"
+                },
+                "SALARY": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "SALARY",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "SALARY",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.SALARY))}}"
+                },
+                "LAST_LOGIN": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "LAST_LOGIN",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "LAST_LOGIN",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.LAST_LOGIN))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "jpmnk3xul7",
+              "derivedColumns": {},
+              "rightColumn": 34,
+              "textSize": "PARAGRAPH",
+              "widgetId": "e3lclgiyd0",
+              "isVisibleFilters": true,
+              "tableData": "{{select_data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 70.9,
+              "bottomRow": 74.9,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "leftColumn": 0,
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{JSON.stringify(select_data.data, null, 2)}}",
+              "key": "vmxxzuvqk3",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "widgetId": "cpk195nyh6",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "Statbox1",
+              "backgroundColor": "white",
+              "rightColumn": 18,
+              "isCanvas": true,
+              "displayName": "Stats Box",
+              "iconSVG": "/static/media/icon.382a7c7b.svg",
+              "widgetId": "leh88nl9s6",
+              "topRow": 76,
+              "bottomRow": 90,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "STATBOX_WIDGET",
+              "hideCard": false,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 2,
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "rightColumn": 202.5,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "k6g2zbmh2o",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 140,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "leh88nl9s6",
+                  "minHeight": 140,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "Text2",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Page Views",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "gzftyg9nwd",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#999999",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH2"
+                    },
+                    {
+                      "widgetName": "Text3",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "2.6 M",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "f0t2fk7pac",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "HEADING1"
+                    },
+                    {
+                      "widgetName": "Text4",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 1,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "21% more than last month",
+                      "key": "vmxxzuvqk3",
+                      "rightColumn": 37,
+                      "textAlign": "LEFT",
+                      "widgetId": "60rmmdbq99",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#03B365",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH2"
+                    },
+                    {
+                      "boxShadow": "NONE",
+                      "widgetName": "IconButton1",
+                      "buttonColor": "#03B365",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634a.svg",
+                      "topRow": 2,
+                      "bottomRow": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 46,
+                      "isDisabled": false,
+                      "key": "l186zj5lku",
+                      "rightColumn": 62,
+                      "iconName": "arrow-top-right",
+                      "widgetId": "f830tsespq",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "k6g2zbmh2o",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "CIRCLE",
+                      "buttonVariant": "PRIMARY"
+                    }
+                  ],
+                  "key": "00xu5tk7cf"
+                }
+              ],
+              "key": "u8k5046j1e"
+            },
+            {
+              "widgetName": "Switch1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "defaultSwitchState"
+                }
+              ],
+              "displayName": "Switch",
+              "iconSVG": "/static/media/icon.a3115bc1.svg",
+              "topRow": 76,
+              "bottomRow": 80,
+              "parentRowSpace": 10,
+              "type": "SWITCH_WIDGET",
+              "alignWidget": "LEFT",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 21,
+              "dynamicBindingPathList": [
+                {
+                  "key": "defaultSwitchState"
+                }
+              ],
+              "isDisabled": false,
+              "key": "g63s0ny6xk",
+              "rightColumn": 33,
+              "widgetId": "bsc58ygtui",
+              "isVisible": true,
+              "label": "Label",
+              "defaultSwitchState": "{{select_data.data}}",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "SwitchGroup1",
+              "isCanvas": false,
+              "displayName": "Switch Group",
+              "iconSVG": "/static/media/icon.c98225ee.svg",
+              "topRow": 83,
+              "bottomRow": 89,
+              "parentRowSpace": 10,
+              "type": "SWITCH_GROUP_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 20,
+              "options": [
+                {
+                  "label": "Blue",
+                  "value": "BLUE"
+                },
+                {
+                  "label": "Green",
+                  "value": "GREEN"
+                },
+                {
+                  "label": "Red",
+                  "value": "RED"
+                }
+              ],
+              "isDisabled": false,
+              "key": "3caxmrqjjg",
+              "isRequired": false,
+              "rightColumn": 38,
+              "defaultSelectedValues": [
+                "BLUE"
+              ],
+              "widgetId": "al1e1pkqne",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "isInline": true,
+              "alignment": "left"
+            },
+            {
+              "widgetName": "Tabs1",
+              "isCanvas": true,
+              "displayName": "Tabs",
+              "iconSVG": "/static/media/icon.74a6d653.svg",
+              "topRow": 93,
+              "bottomRow": 133,
+              "parentRowSpace": 10,
+              "type": "TABS_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 5,
+              "children": [
+                {
+                  "tabId": "tab1",
+                  "widgetName": "Canvas2",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [],
+                  "isDisabled": false,
+                  "key": "00xu5tk7cf",
+                  "tabName": "Tab 1",
+                  "rightColumn": 303.75,
+                  "detachFromLayout": true,
+                  "widgetId": "suztwphpa6",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wp3aoa43eh",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                },
+                {
+                  "tabId": "tab2",
+                  "widgetName": "Canvas3",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 400,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [],
+                  "isDisabled": false,
+                  "key": "00xu5tk7cf",
+                  "tabName": "Tab 2",
+                  "rightColumn": 303.75,
+                  "detachFromLayout": true,
+                  "widgetId": "8kw2mcmyt7",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wp3aoa43eh",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "key": "20ige82xke",
+              "rightColumn": 29,
+              "widgetId": "wp3aoa43eh",
+              "defaultTab": "Tab 1",
+              "shouldShowTabs": true,
+              "tabsObj": {
+                "tab1": {
+                  "label": "Tab 1",
+                  "id": "tab1",
+                  "widgetId": "suztwphpa6",
+                  "isVisible": true,
+                  "index": 0
+                },
+                "tab2": {
+                  "label": "Tab 2",
+                  "id": "tab2",
+                  "widgetId": "8kw2mcmyt7",
+                  "isVisible": true,
+                  "index": 1
+                }
+              },
+              "isVisible": true,
+              "version": 3,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "widgetName": "Text5",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 93,
+              "bottomRow": 97,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 30,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{select_data.data}}",
+              "key": "vmxxzuvqk3",
+              "rightColumn": 46,
+              "textAlign": "LEFT",
+              "widgetId": "p3um5iszn5",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "TreeSelect1",
+              "displayName": "TreeSelect",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Label",
+              "topRow": 99,
+              "bottomRow": 105.9,
+              "parentRowSpace": 10,
+              "type": "SINGLE_SELECT_TREE_WIDGET",
+              "hideCard": false,
+              "defaultOptionValue": "BLUE",
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "leftColumn": 30,
+              "options": [
+                {
+                  "label": "Blue",
+                  "value": "BLUE",
+                  "children": [
+                    {
+                      "label": "Dark Blue",
+                      "value": "DARK BLUE"
+                    },
+                    {
+                      "label": "Light Blue",
+                      "value": "LIGHT BLUE"
+                    }
+                  ]
+                },
+                {
+                  "label": "Green",
+                  "value": "GREEN"
+                },
+                {
+                  "label": "Red",
+                  "value": "RED"
+                }
+              ],
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "foy7ad1hwf",
+              "isRequired": false,
+              "rightColumn": 50,
+              "widgetId": "yvvjntsftc",
+              "isVisible": true,
+              "version": 1,
+              "expandAll": false,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "allowClear": false
+            },
+            {
+              "widgetName": "Video1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "url"
+                }
+              ],
+              "displayName": "Video",
+              "iconSVG": "/static/media/icon.39c2d696.svg",
+              "topRow": 108,
+              "bottomRow": 136,
+              "parentRowSpace": 10,
+              "type": "VIDEO_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 31,
+              "dynamicBindingPathList": [
+                {
+                  "key": "url"
+                }
+              ],
+              "key": "zyf0w1z69r",
+              "rightColumn": 55,
+              "widgetId": "sfkgsjozfe",
+              "isVisible": true,
+              "version": 1,
+              "url": "{{select_data.data}}",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "autoPlay": false
+            },
+            {
+              "widgetName": "Table2",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "ID",
+                "NAME",
+                "AGE",
+                "ADDRESS",
+                "SALARY",
+                "LAST_LOGIN"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 141,
+              "bottomRow": 169,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.65625,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.ID.computedValue"
+                },
+                {
+                  "key": "primaryColumns.NAME.computedValue"
+                },
+                {
+                  "key": "primaryColumns.AGE.computedValue"
+                },
+                {
+                  "key": "primaryColumns.ADDRESS.computedValue"
+                },
+                {
+                  "key": "primaryColumns.SALARY.computedValue"
+                },
+                {
+                  "key": "primaryColumns.LAST_LOGIN.computedValue"
+                }
+              ],
+              "leftColumn": 6,
+              "primaryColumns": {
+                "ID": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "ID",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ID",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.ID))}}"
+                },
+                "NAME": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "NAME",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "NAME",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.NAME))}}"
+                },
+                "AGE": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "AGE",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "AGE",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.AGE))}}"
+                },
+                "ADDRESS": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "ADDRESS",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ADDRESS",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.ADDRESS))}}"
+                },
+                "SALARY": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "SALARY",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "SALARY",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.SALARY))}}"
+                },
+                "LAST_LOGIN": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "LAST_LOGIN",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "LAST_LOGIN",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.LAST_LOGIN))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "jpmnk3xul7",
+              "derivedColumns": {},
+              "rightColumn": 40,
+              "textSize": "PARAGRAPH",
+              "widgetId": "1iv3jxopwb",
+              "isVisibleFilters": true,
+              "tableData": "{{select_data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61dbf6d99dee1c2e929d120f",
+              "name": "select_data",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "IconButton1",
+          "Video1",
+          "TreeSelect1",
+          "Text5",
+          "Text4",
+          "Text3",
+          "Text2",
+          "Text1",
+          "Switch1",
+          "SwitchGroup1",
+          "MainContainer",
+          "Chart1",
+          "Statbox1",
+          "Select1",
+          "Canvas1",
+          "Canvas2",
+          "Canvas3",
+          "Table2",
+          "Tabs1",
+          "Table1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Snowflake",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "userPermissions": [
+    "read:pages",
+    "manage:pages"
+  ],
+  "gitSyncId": "61dbeaa5fee7601cd85d7561_61dbf53d9dee1c2e929d1202"
+}
