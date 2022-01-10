@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Api2",
+    "name": "Api3",
     "datasource": {
       "name": "https://eniikubbx5li8w7.m.pipedream.net",
       "pluginId": "restapi-plugin",
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Postgre",
     "actionConfiguration": {
       "paginationType": "NONE",
       "path": "",
@@ -42,7 +42,7 @@
     "userPermissions": []
   },
   "publishedAction": {
-    "name": "Api2",
+    "name": "Api3",
     "datasource": {
       "name": "https://eniikubbx5li8w7.m.pipedream.net",
       "pluginId": "restapi-plugin",
@@ -56,7 +56,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Postgre",
     "actionConfiguration": {
       "paginationType": "NONE",
       "path": "",
@@ -81,12 +81,12 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "61dbe4f0fee7601cd85d750c",
+  "id": "61dbe516fee7601cd85d750e",
   "deleted": false,
   "userPermissions": [
     "read:actions",
     "execute:actions",
     "manage:actions"
   ],
-  "gitSyncId": "61dbc2192ea8550d00e65f37_61dbe4f0fee7601cd85d750b"
+  "gitSyncId": "61dbc2192ea8550d00e65f37_61dbe516fee7601cd85d750d"
 }
