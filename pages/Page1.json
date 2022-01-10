@@ -8,12 +8,12 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 4896,
+          "rightColumn": 816,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 5016,
+          "bottomRow": 1290,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -24,11 +24,183 @@
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "children": []
+          "children": [
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "email",
+                "first_name",
+                "last_name",
+                "avatar"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 1,
+              "bottomRow": 29,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.first_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.last_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.avatar.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
+                },
+                "email": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
+                },
+                "first_name": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "first_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "first_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.first_name))}}"
+                },
+                "last_name": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "last_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "last_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.last_name))}}"
+                },
+                "avatar": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.avatar))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "k6mui7urd7",
+              "derivedColumns": {},
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "9i8u0t5u97",
+              "isVisibleFilters": true,
+              "tableData": "{{Api1.data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "id": 60,
+                "email": 236
+              }
+            }
+          ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61dbe243fee7601cd85d74e7",
+              "name": "Api1",
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "widgetNames": [
-          "MainContainer"
+          "MainContainer",
+          "Table1"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",
@@ -49,12 +221,12 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 4896,
+          "rightColumn": 816,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 5016,
+          "bottomRow": 1290,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -65,11 +237,183 @@
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "children": []
+          "children": [
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "email",
+                "first_name",
+                "last_name",
+                "avatar"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 1,
+              "bottomRow": 29,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.first_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.last_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.avatar.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
+                },
+                "email": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
+                },
+                "first_name": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "first_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "first_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.first_name))}}"
+                },
+                "last_name": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "last_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "last_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.last_name))}}"
+                },
+                "avatar": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.avatar))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "k6mui7urd7",
+              "derivedColumns": {},
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "9i8u0t5u97",
+              "isVisibleFilters": true,
+              "tableData": "{{Api1.data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "id": 60,
+                "email": 236
+              }
+            }
+          ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61dbe243fee7601cd85d74e7",
+              "name": "Api1",
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "widgetNames": [
-          "MainContainer"
+          "MainContainer",
+          "Table1"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",
