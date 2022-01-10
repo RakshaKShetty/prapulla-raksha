@@ -7,6 +7,7 @@
       "name": "https://eniikubbx5li8w7.m.pipedream.net",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://eniikubbx5li8w7.m.pipedream.net"
       },
       "invalids": [],
@@ -18,6 +19,7 @@
     },
     "pageId": "Postgre",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "",
       "headers": [
@@ -47,6 +49,7 @@
       "name": "https://eniikubbx5li8w7.m.pipedream.net",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://eniikubbx5li8w7.m.pipedream.net"
       },
       "invalids": [],
@@ -58,6 +61,7 @@
     },
     "pageId": "Postgre",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "",
       "headers": [

@@ -7,6 +7,7 @@
       "name": "https://api.airtable.com",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://api.airtable.com"
       },
       "invalids": [],
@@ -18,6 +19,7 @@
     },
     "pageId": "Postgre",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/v0/appWyTsvCwQDVUE9c/Bugs%20and%20issues",
       "encodeParamsToggle": true,
@@ -45,6 +47,7 @@
       "name": "https://api.airtable.com",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://api.airtable.com"
       },
       "invalids": [],
@@ -56,6 +59,7 @@
     },
     "pageId": "Postgre",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/v0/appWyTsvCwQDVUE9c/Bugs%20and%20issues",
       "encodeParamsToggle": true,
